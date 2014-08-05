@@ -11,7 +11,7 @@ task :populate_event_items do
 
   Log = Logger.new(STDOUT)
 
-  # fucking legistar - their api is broken
+  # the legistar api is broken
   connection = Faraday.new(url: 'http://webapi.legistar.com') do |conn|
     conn.headers['Accept'] = 'text/json'
     conn.request :instrumentation
